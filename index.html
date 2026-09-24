@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Brew Haven</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brew Haven | Colombo's Finest Coffee</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:sans-serif;background:#FFF8F0;text-align:center}
-.h{background:white;padding:15px;font-weight:bold;font-size:22px}
-.b{padding:60px 20px;background:#6F4E37;color:white}
-.b h1{font-size:36px}
-.btn{background:#C8A27A;color:white;padding:12px 25px;border-radius:30px;text-decoration:none;display:inline-block;margin-top:20px}
-.c{background:white;margin:20px;border-radius:15px;overflow:hidden}
-.c img{width:100%;height:200px;object-fit:cover}
-.c div{padding:15px}
-.f{padding:20px;background:#3E2723;color:white;margin-top:30px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#FFF8F0;color:#3A2418}
+h1,h2{font-family:'Playfair Display',serif}
+nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);padding:15px 8%;display:flex;justify-content:space-between;align-items:center;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.logo{font-size:24px;font-weight:700;letter-spacing:1px}
+.logo span{color:#C19A6B}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=2000');background-size:cover;background-position:center;display:flex;align-items:center;padding:0 8%;color:white}
+.hero h1{font-size:60px;line-height:1.1;margin-bottom:20px}
+.hero p{font-size:18px;margin-bottom:30px;max-width:500px}
+.btn{background:#C19A6B;color:white;padding:14px 30px;border:none;border-radius:30px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#A67B5B}
+section{padding:80px 8%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:0.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-content{padding:20px}
+.price{color:#C19A6B;font-weight:700;font-size:18px}
+.testimonial{background:#3A2418;color:#FFF8F0;border-radius:15px;padding:30px}
+footer{background:#1A0F08;color:white;padding:50px 8%;text-align:center}
 </style>
 </head>
 <body>
-<div class="h">BREW HAVEN ☕</div>
-<div class="b">
-<h1>Wake Up & Smell The Coffee</h1>
-<p>Best Coffee in Colombo</p>
-<a class="btn" href="#">Order on WhatsApp</a>
+
+<nav><div class="logo">BREW <span>HAVEN</span></div><div>Colombo | 7AM-10PM</div></nav>
+
+<div class="hero">
+<div>
+<h1>Where Every Sip<br>Tells a Story</h1>
+<p>Colombo's most loved artisan coffee, ethically sourced and freshly roasted every morning. Welcome to your second home.</p>
+<a href="#menu" class="btn">Explore Menu</a>
 </div>
-<div class="c">
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600">
-<div><h3>Caramel Latte - Rs. 950</h3></div>
 </div>
-<div class="c">
-<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600">
-<div><h3>Cappuccino - Rs. 850</h3></div>
+
+<section id="menu">
+<h2 style="font-size:42px;text-align:center">Our Signature Menu</h2>
+<p style="text-align:center;margin-top:10px;color:#888">Crafted with love, served with passion</p>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=600"><div class="card-content"><h3>Caramel Latte</h3><p>Sweet caramel with bold espresso</p><br><span class="price">Rs. 850</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=600"><div class="card-content"><h3>Cappuccino</h3><p>Perfect foam, perfect balance</p><br><span class="price">Rs. 750</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=600"><div class="card-content"><h3>Mocha Frappe</h3><p>Chocolate + Coffee = Heaven</p><br><span class="price">Rs. 950</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600"><div class="card-content"><h3>Flat White</h3><p>Aussie style, creamy & strong</p><br><span class="price">Rs. 800</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600"><div class="card-content"><h3>Vanilla Cold Brew</h3><p>24hr brewed, smooth finish</p><br><span class="price">Rs. 900</span></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600"><div class="card-content"><h3>Chocolate Croissant</h3><p>Freshly baked every 2 hours</p><br><span class="price">Rs. 550</span></div></div>
 </div>
-<div class="f">📍 Colombo | 7AM-10PM<br><br>© 2026 Brew Haven</div>
+</section>
+
+<section style="background:white">
+<h2 style="font-size:42px;text-align:center">Why Brew Haven?</h2>
+<div class="grid" style="margin-top:50px;text-align:center">
+<div><h1 style="font-size:50px">☕</h1><h3>Premium Beans</h3><p>Sourced directly from Ella farms</p></div>
+<div><h1 style="font-size:50px">👨‍🍳</h1><h3>Expert Baristas</h3><p>Trained in Melbourne</p></div>
+<div><h1 style="font-size:50px">🏠</h1><h3>Cozy Vibes</h3><p>Work, chill, or date - your space</p></div>
+</div>
+</section>
+
+<section>
+<h2 style="font-size:32px;text-align:center">What Colombo Says</h2>
+<div class="grid">
+<div class="testimonial">"Best coffee in town! The caramel latte is addictive!"<br><b>- Nimali P.</b></div>
+<div class="testimonial">"Perfect place to work. Fast WiFi + great coffee = ❤️"<br><br><b>- Kasun R.</b></div>
+<div class="testimonial">"Finally a real cafe in Colombo! Love the vibe."<br><br><b>- Sarah J.</b></div>
+</div>
+</section>
+
+<footer>
+<h2>BREW HAVEN</h2><br>
+<p>123, Flower Road, Colombo 07 | Open Daily 7AM - 10PM</p><br>
+<a href="https://wa.me/9477XXXXXXX" class="btn">Order on WhatsApp</a>
+<br><br><p style="opacity:0.6;font-size:12px">© 2026 Brew Haven. Built by you ❤️</p>
+</footer>
+
 </body>
 </html>
